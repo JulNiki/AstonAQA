@@ -15,7 +15,7 @@ public class Task5_2 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        result = (a + b) >= 10 && (a + b) <= 20;
+        result = ((a + b) >= 10) && ((a + b) <= 20);
         return result;
 
     }

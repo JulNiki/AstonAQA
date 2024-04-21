@@ -13,7 +13,7 @@ public class Task5 {
     }
     static boolean sumBtwn10and20 (int a, int b) {
         boolean result;
-        result = (a + b) >= 10 && (a + b) <= 20;
+        result = ((a + b) >= 10) && ((a + b) <= 20);
         return result;
 
     }

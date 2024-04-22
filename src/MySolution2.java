@@ -130,8 +130,8 @@ class MySolution2 {
 
     //task 13
     static void fillDiagonalElmntsInArrayOnes(int[][] arr){
-        for (int i = 0; i < arr.length; i++) { //Arr.length - количество строк
-            for (int j = 0; j < arr[i].length; j++) { //Arr[i].length - размер i-й строки
+        for (int i = 0; i < arr.length; i++) { //arr.length - количество строк
+            for (int j = 0; j < arr[i].length; j++) { //arr[i].length - размер i-й строки
                 if ((i == j) ||  ((i + j) == (arr[i].length - 1))) {
                     arr[i][j] = 1;
                 }

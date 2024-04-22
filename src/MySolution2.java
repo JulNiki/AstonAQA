@@ -95,15 +95,15 @@ class MySolution2 {
     }
 
     //task 10
-    static void replace0And1InArray(int[] Arr) {
-        for (int i = 0; i < Arr.length; i++) {
-            if (Arr[i] == 0) {
-                Arr[i] = 1;
-            } else if (Arr[i] == 1) {
-                Arr[i] = 0;
+    static void replace0And1InArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                arr[i] = 1;
+            } else if (arr[i] == 1) {
+                arr[i] = 0;
             }
         }
-        for (int j : Arr) System.out.print(j + " ");
+        for (int j : arr) System.out.print(j + " ");
         System.out.println();
     }
 
@@ -118,24 +118,24 @@ class MySolution2 {
     }
 
     // task12
-    static void multiplyBy2NumLess6InArray(int[] Arr) {
-        for (int i = 0; i < Arr.length; i++) {
-            if (Arr[i] < 6) {
-                Arr[i] = Arr[i] * 2;
+    static void multiplyBy2NumLess6InArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) {
+                arr[i] = arr[i] * 2;
             }
         }
-        for (int j : Arr) System.out.print(j + " ");
+        for (int j : arr) System.out.print(j + " ");
         System.out.println();
     }
 
     //task 13
-    static void fillDiagonalElmntsInArrayOnes(int[][] Arr){
-        for (int i = 0; i < Arr.length; i++) { //Arr.length - количество строк
-            for (int j = 0; j < Arr[i].length; j++) { //Arr[i].length - размер i-й строки
-                if ((i == j) ||  ((i + j) == (Arr[i].length - 1))) {
-                    Arr[i][j] = 1;
+    static void fillDiagonalElmntsInArrayOnes(int[][] arr){
+        for (int i = 0; i < arr.length; i++) { //Arr.length - количество строк
+            for (int j = 0; j < arr[i].length; j++) { //Arr[i].length - размер i-й строки
+                if ((i == j) ||  ((i + j) == (arr[i].length - 1))) {
+                    arr[i][j] = 1;
                 }
-                System.out.print(Arr[i][j] + "\t");
+                System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
 

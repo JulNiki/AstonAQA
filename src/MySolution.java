@@ -19,9 +19,8 @@ class MySolution {
         fillDiagonalElmntsInAarrayOnes(myArr13);//task 13
         int[] myArr14 = makeArrayLenValue(4, 3);//task 14
         for (int j : myArr14) System.out.print(j + " ");
-
-
     }
+
     //task 1
     static void printThreeWords () {
         System.out.println("Orange");
@@ -105,6 +104,7 @@ class MySolution {
             }
         }
         for (int j : Arr) System.out.print(j + " ");
+        System.out.println();
     }
 
     //task 11
@@ -114,6 +114,7 @@ class MySolution {
             myArr[i] = i + 1;
         }
         for (int j : myArr) System.out.print(j + " ");
+        System.out.println();
     }
 
     // task12
@@ -124,6 +125,7 @@ class MySolution {
             }
         }
         for (int j : Arr) System.out.print(j + " ");
+        System.out.println();
     }
 
     //task 13
@@ -153,20 +155,4 @@ class MySolution {
         return arr;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

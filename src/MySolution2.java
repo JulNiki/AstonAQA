@@ -16,7 +16,7 @@ class MySolution2 {
         int[] Arr12 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         multiplyBy2NumLess6InArray(Arr12);//task 12
         int[][] myArr13 = new int[5][5];
-        fillDiagonalElmntsInAarrayOnes(myArr13);//task 13
+        fillDiagonalElmntsInArrayOnes(myArr13);//task 13
         makeArrayLenValue(4, 3);//task 14
 
     }
@@ -129,7 +129,7 @@ class MySolution2 {
     }
 
     //task 13
-    static void fillDiagonalElmntsInAarrayOnes (int[][] Arr){
+    static void fillDiagonalElmntsInArrayOnes(int[][] Arr){
         for (int i = 0; i < Arr.length; i++) { //Arr.length - количество строк
             for (int j = 0; j < Arr[i].length; j++) { //Arr[i].length - размер i-й строки
                 if ((i == j) ||  ((i + j) == (Arr[i].length - 1))) {

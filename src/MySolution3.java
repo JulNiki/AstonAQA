@@ -18,7 +18,6 @@ class MySolution3 {
         int[][] myArr13 = new int[5][5];
         fillDiagonalElmntsInArrayOnes(myArr13);//task 13
         makeArrayLenValue(4, 3);//task 14
-
     }
 
     //task 1
@@ -105,7 +104,7 @@ class MySolution3 {
             myArr[i] = i + 1;
         }
         System.out.println(Arrays.toString(myArr));
-         }
+    }
 
     // task12
     static void multiplyByTwoNumLessSixInArray(int[] arr) {
@@ -127,7 +126,6 @@ class MySolution3 {
                 System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
-
         }
     }
 

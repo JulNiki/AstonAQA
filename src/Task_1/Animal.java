@@ -18,10 +18,6 @@ public abstract class Animal {
         return totalAnimals;
     }
 
-    public static void setTotalAnimals(int totalAnimals) {
-        Animal.totalAnimals = totalAnimals;
-    }
-
     public String getName() {
         return name;
     }

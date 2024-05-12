@@ -1,20 +1,9 @@
-//Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия. Результатом выполнения действия будет печать в консоль.
-// (Например, dogBobik.run(150); -> 'Бобик пробежал 150 м.');
-//У каждого животного есть ограничения на действия (бег: кот 200 м., собака 500 м.; плавание: кот не умеет плавать, собака 10 м.).
-//Добавить подсчет созданных котов, собак и животных.
-//Расширить задачу, добавив для котов возможность кушать из миски, выполнив следующие пункты:
-//Сделать так, чтобы в миске с едой не могло получиться отрицательного количества еды (например, в миске 10 еды, а кот пытается покушать 15-20).
-//Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны). Если коту удалось покушать (хватило еды), сытость = true.
-//Считаем, что если коту мало еды в миске, то он её просто не трогает, то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
-//Создать массив котов и миску с едой, попросить всех котов покушать из этой миски и потом вывести информацию о сытости котов в консоль.
-//Добавить метод, с помощью которого можно было бы добавлять еду в миску.
-
 package Task_1;
 
 public class Cat extends Animal{
     private static int totalCats;
     private boolean isFed = false;
-    private static int foodAmount;
+    private static int foodAmountInBowl;
 
     public Cat(String name) {
         super(name);
@@ -29,10 +18,12 @@ public class Cat extends Animal{
 
     @Override
     public void run(int distance) {
-        if (distance <= 200) {
-            System.out.printf("Кот %s пробежал %d м.", name, distance);
+        if (distance <= 0) {
+            System.out.printf("%s - ошибка. Введена некорректная дистанция.\n", name);
+        } else if (distance <= 200) {
+            System.out.printf("Кот %s пробежал %d м.\n", name, distance);
         } else {
-            System.out.printf("Кот %s не может бежать больше 200 м.", name);
+            System.out.printf("Кот %s не может бежать больше 200 м.\n", name);
         }
 
     }
@@ -43,21 +34,21 @@ public class Cat extends Animal{
     }
 
     public void eat(int portion) {
-        if (foodAmount >= portion) {
-            foodAmount -= portion;
+        if (foodAmountInBowl >= portion) {
+            foodAmountInBowl -= portion;
             isFed = true;
-            System.out.printf("Кот %s покушал и сейчас сыт.\n", name);
+            System.out.printf("Кот %s покушал и сейчас сытый.\n", name);
         } else {
-            System.out.printf("%s не смог покушать т.к. недотаточно в еды в миске. Кот голоден.\n", name);
+            System.out.printf("В миске недостаточно в еды, кот %s не смог покушать - он голоден.\n", name);
         }
     }
 
-    public static void setFoodAmount(int foodAmount) {
-        Cat.foodAmount = foodAmount;
+    public static void setFoodAmountInBowl(int foodAmountInBowl) {
+        Cat.foodAmountInBowl = foodAmountInBowl;
     }
-
-    public static void addFood (int addFoodAmount) {
-        Cat.foodAmount += addFoodAmount;
+// метод, с помощью которого можно добавить еду в миску
+    public static void addFoodInBowl (int addFoodAmount) {
+        Cat.foodAmountInBowl += addFoodAmount;
     }
 
     public static int getTotalCats() {
@@ -68,12 +59,12 @@ public class Cat extends Animal{
         return isFed;
     }
 
-    public static int getFoodAmount() {
-        return foodAmount;
+    public static int getFoodAmountInBowl() {
+        return foodAmountInBowl;
     }
 
     @Override
     public String toString() {
-         return String.format("Кот: %s; Сытость: %b.\n", name, isFed);
+         return String.format("Кот: %s, сытость: %b.", name, isFed);
     }
 }

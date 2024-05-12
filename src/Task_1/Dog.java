@@ -15,7 +15,7 @@ public class Dog extends Animal{
     @Override
     public void run(int distance) {
         if (distance <= 0) {
-            System.out.println("ERROR");
+            System.out.printf("%s - ошибка. Введена некорректная дистанция.\n", name);
         } else if (distance <= 500) {
             System.out.printf("Собака %s пробежала %d м.\n", name, distance);
         } else {
@@ -26,7 +26,7 @@ public class Dog extends Animal{
     @Override
     public void swim(int distance) {
         if (distance <= 0) {
-            System.out.println("ERROR");
+            System.out.printf("%s - ошибка. Введена некорректная дистанция.\n", name);
         } else if (distance <= 10) {
             System.out.printf("Собака %s проплыла %d м.\n", name, distance);
         } else {
@@ -36,7 +36,7 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return String.format("Собака: %s", name);
+        return String.format("Собака: %s;", name);
     }
 
     public static int getTotalDogs() {

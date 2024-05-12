@@ -15,6 +15,7 @@ public class Main {
         dogs[3].run(501);
         dogs[4].run(-1);
         System.out.println();
+
 //массив котов
         Cat[] cats = {new Cat("Коржик"), new Cat("Карамелька"), new Cat("Компот"), new Cat("Чарли"), new Cat("Живоглот"), new Cat("Бегемот")};
         for (Cat cat: cats) {
@@ -30,9 +31,9 @@ public class Main {
         cats[5].swim(10);
 
         System.out.println("\nКоличество еды в миске: " + Cat.getFoodAmountInBowl());
-        Cat.addFoodInBowl(110);
+        Cat.addFoodInBowl(110); //добавили еду в миску
         System.out.println("Количество еды в миске после добавления: " + Cat.getFoodAmountInBowl());
-        for (Cat cat: cats) {
+        for (Cat cat: cats) { // просим котов покушать
             cat.eat(20);
         }
 

@@ -1,9 +1,9 @@
 package Task_1;
 
 public class Cat extends Animal{
-    private static int totalCats;
-    private boolean isFed = false;
-    private static int foodAmountInBowl;
+    private static int totalCats; //количество котов
+    private boolean isFed = false; //поле сытость
+    private static int foodAmountInBowl; //еда в миске
 
     public Cat(String name) {
         super(name);
@@ -17,7 +17,7 @@ public class Cat extends Animal{
     }
 
     @Override
-    public void run(int distance) {
+    public void run(int distance) { //бег, передаем длинну дистанции
         if (distance <= 0) {
             System.out.printf("%s - ошибка. Введена некорректная дистанция.\n", name);
         } else if (distance <= 200) {
@@ -29,11 +29,11 @@ public class Cat extends Animal{
     }
 
     @Override
-    public void swim(int distance) {
+    public void swim(int distance) { // плаванье, передаем длинну дистанции
         System.out.printf("Кот %s не умеет плавать.\n", name);
     }
 
-    public void eat(int portion) {
+    public void eat(int portion) { //метод для кормления
         if (foodAmountInBowl >= portion) {
             foodAmountInBowl -= portion;
             isFed = true;
@@ -42,9 +42,9 @@ public class Cat extends Animal{
             System.out.printf("В миске недостаточно в еды, кот %s не смог покушать - он голоден.\n", name);
         }
     }
-
+    // метод, с помощью которого можно изменить количество еды в миске
     public static void setFoodAmountInBowl(int foodAmountInBowl) {
-        Cat.foodAmountInBowl = foodAmountInBowl;
+        Cat.foodAmountInBowl = foodAmountInBowl >= 0? foodAmountInBowl:Cat.foodAmountInBowl;
     }
 // метод, с помощью которого можно добавить еду в миску
     public static void addFoodInBowl (int addFoodAmount) {

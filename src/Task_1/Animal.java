@@ -2,7 +2,7 @@ package Task_1;
 
 public abstract class Animal {
 
-    private static int totalAnimals;
+    private static int totalAnimals;//общее кол-во животных
     protected String name;
 
 
@@ -11,8 +11,8 @@ public abstract class Animal {
         totalAnimals++;
     }
 
-    public abstract void run(int distance);
-    public abstract void swim(int distance);
+    public abstract void run(int distance); // абстрактный метод - бег
+    public abstract void swim(int distance);// абстрактный метод - плавание
 
     public static int getTotalAnimals() {
         return totalAnimals;

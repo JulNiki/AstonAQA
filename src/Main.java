@@ -6,33 +6,29 @@
 
 public class Main {
     public static void main(String[] args) {
-        String[][] array = {
-                {"1", "2", "3", "4"},
-                {"5", "6", "7", "8"},
-                {"9", "10", "11", "12"},
-                {"13", "14", "15", "16"}
-        };
-
-        String[][] errArray = {
-                {"öö", "2", "3", "4"},
-                {"5", "6", "7", "8"},
-                {"9", "10", "11", "12"},
-                {"13", "14", "15", "16"}
-        };
+        String[][] array = {{"11", "0", "-1", "6"},{"8", "-7", "4", "2"}, {"8", "0", "0", "1"}, {"1", "1", "1", "1"} };
+        String[][] errArray1 = {{"öö", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
+        String[][] errArray2 = {{"1", "2", "7"}, {"5", "8", "6", "2"}, {"3", "7", "8", "88"}};
 
         try {
-            int sum = convertArrayElementsToIntAndSummarize(array);
-            System.out.println("Сумма элементов массива: " + sum);
+            System.out.println("Сумма элементов массива = " + convertArrayElementsToIntAndSummarize(array));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.err.println("Ошибка: " + e.getMessage());
         }
 
         try {
-            int sum = convertArrayElementsToIntAndSummarize(errArray);
-            System.out.println("Сумма элементов массива = " + sum);
+            System.out.println("Сумма элементов массива = " + convertArrayElementsToIntAndSummarize(errArray1));
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.err.println("Ошибка: " + e.getMessage());
         }
+
+        try {
+            System.out.println("Сумма элементов массива = " + convertArrayElementsToIntAndSummarize(errArray2));
+        } catch (MyArraySizeException | MyArrayDataException e) {
+            System.err.println("Ошибка: " + e.getMessage());
+        }
+
+
     }
 
     public static int convertArrayElementsToIntAndSummarize(String[][] array) throws MyArraySizeException, MyArrayDataException {

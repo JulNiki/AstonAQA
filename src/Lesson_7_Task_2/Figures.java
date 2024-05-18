@@ -1,4 +1,4 @@
-package Lesson_7_Task_2;
+package Task_2;
 
 public interface Figures {
     double calculateArea();

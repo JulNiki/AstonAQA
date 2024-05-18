@@ -55,9 +55,6 @@ public class Cat extends Animal{
         return totalCats;
     }
 
-    public boolean isFed() {
-        return isFed;
-    }
 
     public static int getFoodAmountInBowl() {
         return foodAmountInBowl;

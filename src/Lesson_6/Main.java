@@ -1,4 +1,4 @@
-package Task;
+package Lesson_6;
 public class Main {
     public static void main(String[] args) {
         Employee[] person = new Employee[5];

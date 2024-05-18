@@ -1,7 +1,5 @@
-package Lesson_4;
-
 import java.util.Arrays;
-class Main {
+class MySolution3 {
     public static void main(String[] args) {
         printThreeWords (); //task 1
         checkSumSign ( 6, -7); //task 2

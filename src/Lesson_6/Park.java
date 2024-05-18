@@ -1,6 +1,6 @@
 /*3. Создать класс Park с внутренним классом, с помощью объектов которого можно хранить информацию об аттракционах, времени их работы и стоимости.*/
 
-package Lesson_6;
+package Task;
 public class Park {
     String parkName;
     public Park(String parkName) {

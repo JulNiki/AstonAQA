@@ -1,4 +1,4 @@
-package Task_2;
+package Lesson_7_Task_2;
 
 public class Rectangle implements Figures {
     private double sideA;

@@ -18,6 +18,7 @@ public class Main {
 
 //массив котов
         Cat[] cats = {new Cat("Коржик"), new Cat("Карамелька"), new Cat("Компот"), new Cat("Чарли"), new Cat("Живоглот"), new Cat("Бегемот")};
+        Bowl bowl = new Bowl();
         for (Cat cat: cats) {
             System.out.println(cat);
         }
@@ -30,9 +31,9 @@ public class Main {
         cats[4].run(201);
         cats[5].swim(10);
 
-        System.out.println("\nКоличество еды в миске: " + Cat.getFoodAmountInBowl());
-        Cat.addFoodInBowl(110); //добавили еду в миску
-        System.out.println("Количество еды в миске после добавления: " + Cat.getFoodAmountInBowl());
+        System.out.println("\nКоличество еды в миске: " + Bowl.getFoodAmountInBowl());
+        Bowl.addFoodInBowl(110); //добавили еду в миску
+        System.out.println("Количество еды в миске после добавления: " + Bowl.getFoodAmountInBowl());
         for (Cat cat: cats) { // просим котов покушать
             cat.eat(20);
         }

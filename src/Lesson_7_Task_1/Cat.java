@@ -29,9 +29,9 @@ public class Cat extends Animal{
     public void eat(int portion) { // метод для кормления
         if (bowl.eatFromBowl(portion)) {
             isFed = true;
-            System.out.printf("Кот %s покушал и сейчас сытый.n", name);
+            System.out.printf("Кот %s покушал и сейчас сытый.\n", name);
         } else {
-            System.out.printf("В миске недостаточно в еды, кот %s не смог покушать - он голоден.n", name);
+            System.out.printf("В миске недостаточно в еды, кот %s не смог покушать - он голоден.\n", name);
         }
     }
 

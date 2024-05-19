@@ -32,21 +32,6 @@ public class Circle implements Figures{
         return Figures.super.calculatePerimeter(radius);
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-    public void setFillColor(String fillColor) {
-        this.fillColor = fillColor;
-    }
-
-    public void setBorderColor(String borderColor) {
-        this.borderColor = borderColor;
-    }
 
     @Override
     public String toString() {
